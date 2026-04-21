@@ -22,7 +22,7 @@ class AuthController extends Controller
     if (Auth::attempt($credentials)) {
         $request->session()->regenerate();
         
-        // Aquí mandamos el mensaje flash "success"
+
         return redirect()->intended('direcciones')
             ->with('success', '¡Ya estás dentro!'); 
     }
